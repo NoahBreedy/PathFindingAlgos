@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>Path Finding</title>
+        <h1>Welcome to my collection of pathfinding algorithms</h1>
+        <h3>Drag on the green and red squares to move them</h3>
+        <script src="helpers.js"></script>
+        <script src="BFS.js"></script>
+        <script src="Closest.js"></script>
+        <script src="AStar.js"></script>
+    </head>
+
+    <body>
+        <canvas id="cnv" onmousemove="handleMouseMove(event)" >
+            Your browser does not support javascript
+        </canvas>
+        <div class="algorithms">
+        <h2>Algorithm Settings</h2>
+        <label >
+            Pathfinding Algo:
+            <select id="algo">
+                <option value="Closest">Closest</option>
+                <option value="BFS">BFS</option>
+                <option value="Star">A*</option>
+            </select>
+        </label>
+        <div>
+        <button class="button-54" onclick="Step2()">Step: </button>
+        <button id="run-btn" class="button-54" onclick="Run()">Run: </button>
+        </div>
+        <button class="button-50" onclick="resetPath()">Reset Path</button>
+        <button class="button-50" onclick="resetScreen()">Reset Screen</button>
+        
+        <label class="form-control">
+            <input type="checkbox" id="drawWalls" name="drawWalls" />
+            Draw Walls?
+        </label>
+        
+        <label >
+            <input min="10" max="55" type="number" value="10" id="resolution" name="resolution" />
+            Resolution
+        </label>
+        
+        </div>
+        <h6><a href="https://github.com/NoahBreedy">Made by Noah Breedy</a></h6>
+        <script src="main.js"></script>
+    </body>
+</html>
